@@ -1,0 +1,502 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8B620390198ADB5C00C06152 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B62038F198ADB5C00C06152 /* Foundation.framework */; };
+		8B620392198ADB5C00C06152 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B620391198ADB5C00C06152 /* CoreGraphics.framework */; };
+		8B620394198ADB5C00C06152 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B620393198ADB5C00C06152 /* UIKit.framework */; };
+		8B620396198ADB5C00C06152 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B620395198ADB5C00C06152 /* SpriteKit.framework */; };
+		8B62039C198ADB5C00C06152 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8B62039A198ADB5C00C06152 /* InfoPlist.strings */; };
+		8B62039E198ADB5C00C06152 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B62039D198ADB5C00C06152 /* main.m */; };
+		8B6203A2198ADB5C00C06152 /* iAKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B6203A1198ADB5C00C06152 /* iAKAppDelegate.m */; };
+		8B6203A5198ADB5C00C06152 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B6203A3198ADB5C00C06152 /* Main_iPhone.storyboard */; };
+		8B6203A8198ADB5C00C06152 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B6203A6198ADB5C00C06152 /* Main_iPad.storyboard */; };
+		8B6203AB198ADB5C00C06152 /* iAKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B6203AA198ADB5C00C06152 /* iAKViewController.m */; };
+		8B6203AE198ADB5C00C06152 /* iAKMyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B6203AD198ADB5C00C06152 /* iAKMyScene.m */; };
+		8B6203B0198ADB5C00C06152 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B6203AF198ADB5C00C06152 /* Spaceship.png */; };
+		8B6203B2198ADB5C00C06152 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B6203B1198ADB5C00C06152 /* Images.xcassets */; };
+		8B6203B9198ADB5C00C06152 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B6203B8198ADB5C00C06152 /* XCTest.framework */; };
+		8B6203BA198ADB5C00C06152 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B62038F198ADB5C00C06152 /* Foundation.framework */; };
+		8B6203BB198ADB5C00C06152 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B620393198ADB5C00C06152 /* UIKit.framework */; };
+		8B6203C3198ADB5C00C06152 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8B6203C1198ADB5C00C06152 /* InfoPlist.strings */; };
+		8B6203C5198ADB5C00C06152 /* TidyUpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B6203C4198ADB5C00C06152 /* TidyUpTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8B6203BC198ADB5C00C06152 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8B620384198ADB5B00C06152 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B62038B198ADB5C00C06152;
+			remoteInfo = TidyUp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8B62038C198ADB5C00C06152 /* TidyUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TidyUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B62038F198ADB5C00C06152 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8B620391198ADB5C00C06152 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8B620393198ADB5C00C06152 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8B620395198ADB5C00C06152 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		8B620399198ADB5C00C06152 /* TidyUp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TidyUp-Info.plist"; sourceTree = "<group>"; };
+		8B62039B198ADB5C00C06152 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8B62039D198ADB5C00C06152 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8B62039F198ADB5C00C06152 /* TidyUp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TidyUp-Prefix.pch"; sourceTree = "<group>"; };
+		8B6203A0198ADB5C00C06152 /* iAKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iAKAppDelegate.h; sourceTree = "<group>"; };
+		8B6203A1198ADB5C00C06152 /* iAKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iAKAppDelegate.m; sourceTree = "<group>"; };
+		8B6203A4198ADB5C00C06152 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		8B6203A7198ADB5C00C06152 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		8B6203A9198ADB5C00C06152 /* iAKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iAKViewController.h; sourceTree = "<group>"; };
+		8B6203AA198ADB5C00C06152 /* iAKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iAKViewController.m; sourceTree = "<group>"; };
+		8B6203AC198ADB5C00C06152 /* iAKMyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iAKMyScene.h; sourceTree = "<group>"; };
+		8B6203AD198ADB5C00C06152 /* iAKMyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iAKMyScene.m; sourceTree = "<group>"; };
+		8B6203AF198ADB5C00C06152 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
+		8B6203B1198ADB5C00C06152 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8B6203B7198ADB5C00C06152 /* TidyUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TidyUpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B6203B8198ADB5C00C06152 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		8B6203C0198ADB5C00C06152 /* TidyUpTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TidyUpTests-Info.plist"; sourceTree = "<group>"; };
+		8B6203C2198ADB5C00C06152 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8B6203C4198ADB5C00C06152 /* TidyUpTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TidyUpTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8B620389198ADB5C00C06152 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B620392198ADB5C00C06152 /* CoreGraphics.framework in Frameworks */,
+				8B620394198ADB5C00C06152 /* UIKit.framework in Frameworks */,
+				8B620396198ADB5C00C06152 /* SpriteKit.framework in Frameworks */,
+				8B620390198ADB5C00C06152 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B6203B4198ADB5C00C06152 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B6203B9198ADB5C00C06152 /* XCTest.framework in Frameworks */,
+				8B6203BB198ADB5C00C06152 /* UIKit.framework in Frameworks */,
+				8B6203BA198ADB5C00C06152 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8B620383198ADB5B00C06152 = {
+			isa = PBXGroup;
+			children = (
+				8B620397198ADB5C00C06152 /* TidyUp */,
+				8B6203BE198ADB5C00C06152 /* TidyUpTests */,
+				8B62038E198ADB5C00C06152 /* Frameworks */,
+				8B62038D198ADB5C00C06152 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8B62038D198ADB5C00C06152 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8B62038C198ADB5C00C06152 /* TidyUp.app */,
+				8B6203B7198ADB5C00C06152 /* TidyUpTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8B62038E198ADB5C00C06152 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8B62038F198ADB5C00C06152 /* Foundation.framework */,
+				8B620391198ADB5C00C06152 /* CoreGraphics.framework */,
+				8B620393198ADB5C00C06152 /* UIKit.framework */,
+				8B620395198ADB5C00C06152 /* SpriteKit.framework */,
+				8B6203B8198ADB5C00C06152 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8B620397198ADB5C00C06152 /* TidyUp */ = {
+			isa = PBXGroup;
+			children = (
+				8B6203A0198ADB5C00C06152 /* iAKAppDelegate.h */,
+				8B6203A1198ADB5C00C06152 /* iAKAppDelegate.m */,
+				8B6203A3198ADB5C00C06152 /* Main_iPhone.storyboard */,
+				8B6203A6198ADB5C00C06152 /* Main_iPad.storyboard */,
+				8B6203A9198ADB5C00C06152 /* iAKViewController.h */,
+				8B6203AA198ADB5C00C06152 /* iAKViewController.m */,
+				8B6203AC198ADB5C00C06152 /* iAKMyScene.h */,
+				8B6203AD198ADB5C00C06152 /* iAKMyScene.m */,
+				8B6203AF198ADB5C00C06152 /* Spaceship.png */,
+				8B6203B1198ADB5C00C06152 /* Images.xcassets */,
+				8B620398198ADB5C00C06152 /* Supporting Files */,
+			);
+			path = TidyUp;
+			sourceTree = "<group>";
+		};
+		8B620398198ADB5C00C06152 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8B620399198ADB5C00C06152 /* TidyUp-Info.plist */,
+				8B62039A198ADB5C00C06152 /* InfoPlist.strings */,
+				8B62039D198ADB5C00C06152 /* main.m */,
+				8B62039F198ADB5C00C06152 /* TidyUp-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8B6203BE198ADB5C00C06152 /* TidyUpTests */ = {
+			isa = PBXGroup;
+			children = (
+				8B6203C4198ADB5C00C06152 /* TidyUpTests.m */,
+				8B6203BF198ADB5C00C06152 /* Supporting Files */,
+			);
+			path = TidyUpTests;
+			sourceTree = "<group>";
+		};
+		8B6203BF198ADB5C00C06152 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8B6203C0198ADB5C00C06152 /* TidyUpTests-Info.plist */,
+				8B6203C1198ADB5C00C06152 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8B62038B198ADB5C00C06152 /* TidyUp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B6203C8198ADB5C00C06152 /* Build configuration list for PBXNativeTarget "TidyUp" */;
+			buildPhases = (
+				8B620388198ADB5C00C06152 /* Sources */,
+				8B620389198ADB5C00C06152 /* Frameworks */,
+				8B62038A198ADB5C00C06152 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TidyUp;
+			productName = TidyUp;
+			productReference = 8B62038C198ADB5C00C06152 /* TidyUp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8B6203B6198ADB5C00C06152 /* TidyUpTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B6203CB198ADB5C00C06152 /* Build configuration list for PBXNativeTarget "TidyUpTests" */;
+			buildPhases = (
+				8B6203B3198ADB5C00C06152 /* Sources */,
+				8B6203B4198ADB5C00C06152 /* Frameworks */,
+				8B6203B5198ADB5C00C06152 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8B6203BD198ADB5C00C06152 /* PBXTargetDependency */,
+			);
+			name = TidyUpTests;
+			productName = TidyUpTests;
+			productReference = 8B6203B7198ADB5C00C06152 /* TidyUpTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8B620384198ADB5B00C06152 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = iAK;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = iAKTU;
+				TargetAttributes = {
+					8B6203B6198ADB5C00C06152 = {
+						TestTargetID = 8B62038B198ADB5C00C06152;
+					};
+				};
+			};
+			buildConfigurationList = 8B620387198ADB5B00C06152 /* Build configuration list for PBXProject "TidyUp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8B620383198ADB5B00C06152;
+			productRefGroup = 8B62038D198ADB5C00C06152 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8B62038B198ADB5C00C06152 /* TidyUp */,
+				8B6203B6198ADB5C00C06152 /* TidyUpTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8B62038A198ADB5C00C06152 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B6203B0198ADB5C00C06152 /* Spaceship.png in Resources */,
+				8B6203B2198ADB5C00C06152 /* Images.xcassets in Resources */,
+				8B6203A8198ADB5C00C06152 /* Main_iPad.storyboard in Resources */,
+				8B6203A5198ADB5C00C06152 /* Main_iPhone.storyboard in Resources */,
+				8B62039C198ADB5C00C06152 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B6203B5198ADB5C00C06152 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B6203C3198ADB5C00C06152 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8B620388198ADB5C00C06152 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B6203AE198ADB5C00C06152 /* iAKMyScene.m in Sources */,
+				8B6203A2198ADB5C00C06152 /* iAKAppDelegate.m in Sources */,
+				8B62039E198ADB5C00C06152 /* main.m in Sources */,
+				8B6203AB198ADB5C00C06152 /* iAKViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B6203B3198ADB5C00C06152 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B6203C5198ADB5C00C06152 /* TidyUpTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8B6203BD198ADB5C00C06152 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8B62038B198ADB5C00C06152 /* TidyUp */;
+			targetProxy = 8B6203BC198ADB5C00C06152 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8B62039A198ADB5C00C06152 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B62039B198ADB5C00C06152 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8B6203A3198ADB5C00C06152 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B6203A4198ADB5C00C06152 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		8B6203A6198ADB5C00C06152 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B6203A7198ADB5C00C06152 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		8B6203C1198ADB5C00C06152 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B6203C2198ADB5C00C06152 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8B6203C6198ADB5C00C06152 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8B6203C7198ADB5C00C06152 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8B6203C9198ADB5C00C06152 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TidyUp/TidyUp-Prefix.pch";
+				INFOPLIST_FILE = "TidyUp/TidyUp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8B6203CA198ADB5C00C06152 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TidyUp/TidyUp-Prefix.pch";
+				INFOPLIST_FILE = "TidyUp/TidyUp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		8B6203CC198ADB5C00C06152 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TidyUp.app/TidyUp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TidyUp/TidyUp-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "TidyUpTests/TidyUpTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		8B6203CD198ADB5C00C06152 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TidyUp.app/TidyUp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TidyUp/TidyUp-Prefix.pch";
+				INFOPLIST_FILE = "TidyUpTests/TidyUpTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8B620387198ADB5B00C06152 /* Build configuration list for PBXProject "TidyUp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B6203C6198ADB5C00C06152 /* Debug */,
+				8B6203C7198ADB5C00C06152 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B6203C8198ADB5C00C06152 /* Build configuration list for PBXNativeTarget "TidyUp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B6203C9198ADB5C00C06152 /* Debug */,
+				8B6203CA198ADB5C00C06152 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8B6203CB198ADB5C00C06152 /* Build configuration list for PBXNativeTarget "TidyUpTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B6203CC198ADB5C00C06152 /* Debug */,
+				8B6203CD198ADB5C00C06152 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8B620384198ADB5B00C06152 /* Project object */;
+}
