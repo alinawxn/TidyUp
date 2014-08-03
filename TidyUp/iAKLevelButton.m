@@ -8,7 +8,7 @@
 
 #import "iAKLevelButton.h"
 #import "iAKGameConfig.h"
-#import "iAKLevelScene.h"
+#import "iAKMyScene.h"
 
 @interface iAKLevelButton() {
     
@@ -16,7 +16,7 @@
     BOOL selecting;
 }
 
-@property (nonatomic, readonly) iAKLevelScene *levelScene;
+@property (nonatomic, readonly) iAKMyScene *levelScene;
 @property (nonatomic, strong) SKTexture *upTexture;
 @property (nonatomic, strong) SKTexture *downTexture;
 @property (nonatomic, strong) SKAction *buttonSound;
@@ -65,9 +65,9 @@
     return self;
 }
 
-- (iAKLevelScene *)levelScene {
+- (iAKMyScene *)levelScene {
     
-    return (iAKLevelScene *)self.scene;
+    return (iAKMyScene *)self.scene;
 }
 
 - (BOOL)isLocked {

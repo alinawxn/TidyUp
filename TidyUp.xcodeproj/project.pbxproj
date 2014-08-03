@@ -110,7 +110,6 @@
 		8BCC3337198EC05A0011B0A2 /* iAKLevelButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BCC3336198EC05A0011B0A2 /* iAKLevelButton.m */; };
 		8BCC333B198EC20D0011B0A2 /* iAKLevelGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BCC333A198EC20D0011B0A2 /* iAKLevelGrid.m */; };
 		8BCC333E198EC2420011B0A2 /* iAKLevelScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BCC333D198EC2420011B0A2 /* iAKLevelScroller.m */; };
-		8BCC3341198EC2850011B0A2 /* iAKLevelScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BCC3340198EC2850011B0A2 /* iAKLevelScene.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -240,8 +239,6 @@
 		8BCC333A198EC20D0011B0A2 /* iAKLevelGrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = iAKLevelGrid.m; path = ../iAKLevelGrid.m; sourceTree = "<group>"; };
 		8BCC333C198EC2420011B0A2 /* iAKLevelScroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iAKLevelScroller.h; path = ../iAKLevelScroller.h; sourceTree = "<group>"; };
 		8BCC333D198EC2420011B0A2 /* iAKLevelScroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = iAKLevelScroller.m; path = ../iAKLevelScroller.m; sourceTree = "<group>"; };
-		8BCC333F198EC2850011B0A2 /* iAKLevelScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iAKLevelScene.h; path = ../iAKLevelScene.h; sourceTree = "<group>"; };
-		8BCC3340198EC2850011B0A2 /* iAKLevelScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = iAKLevelScene.m; path = ../iAKLevelScene.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -318,8 +315,6 @@
 				8BCC333A198EC20D0011B0A2 /* iAKLevelGrid.m */,
 				8BCC333C198EC2420011B0A2 /* iAKLevelScroller.h */,
 				8BCC333D198EC2420011B0A2 /* iAKLevelScroller.m */,
-				8BCC333F198EC2850011B0A2 /* iAKLevelScene.h */,
-				8BCC3340198EC2850011B0A2 /* iAKLevelScene.m */,
 				8BA05531198BCA3200A918FF /* Classes */,
 				8B6203CE198ADCFE00C06152 /* Arts */,
 				8B6203A0198ADB5C00C06152 /* iAKAppDelegate.h */,
@@ -637,7 +632,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BCC333B198EC20D0011B0A2 /* iAKLevelGrid.m in Sources */,
-				8BCC3341198EC2850011B0A2 /* iAKLevelScene.m in Sources */,
 				8BCC3337198EC05A0011B0A2 /* iAKLevelButton.m in Sources */,
 				8BCC3334198EBFBF0011B0A2 /* iAKGameModel.m in Sources */,
 				8BCC333E198EC2420011B0A2 /* iAKLevelScroller.m in Sources */,
