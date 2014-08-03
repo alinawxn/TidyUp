@@ -7,25 +7,24 @@
 //
 
 #import "iAKViewController.h"
-#import "iAKMyScene.h"
 
 @implementation iAKViewController
 
-- (void)viewDidLoad
+- (void)viewWillLayoutSubviews
 {
-    [super viewDidLoad];
-
+    [super viewWillLayoutSubviews];
     // Configure the view.
     SKView * skView = (SKView *)self.view;
     skView.showsFPS = YES;
     skView.showsNodeCount = YES;
     
     // Create and configure the scene.
-    SKScene * scene = [iAKMyScene sceneWithSize:skView.bounds.size];
-    scene.scaleMode = SKSceneScaleModeAspectFill;
+    self.scene = [[iAKMyScene alloc ]initWithSize:skView.bounds.size state:GameStateMainMenu];
+    self.scene.scaleMode = SKSceneScaleModeAspectFill;
     
     // Present the scene.
-    [skView presentScene:scene];
+    [skView presentScene:self.scene];
+    
 }
 
 - (BOOL)shouldAutorotate

@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <SpriteKit/SpriteKit.h>
+#import "iAKMyScene.h"
 
 @interface iAKViewController : UIViewController
+
+@property iAKMyScene *scene;
 
 @end
