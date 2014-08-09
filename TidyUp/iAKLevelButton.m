@@ -169,8 +169,7 @@
     if (selecting) {
         
         [self runAction:[self selectLevel] completion:^{
-            
-            [self runAction:_buttonSound];
+
             
             int level = self.name.intValue;
             
