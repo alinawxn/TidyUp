@@ -22,6 +22,28 @@
     self.scene = [[iAKMyScene alloc ]initWithSize:skView.bounds.size state:GameStateMainMenu];
     self.scene.scaleMode = SKSceneScaleModeAspectFill;
     
+    if(![[NSUserDefaults standardUserDefaults] boolForKey:@"firstStart"]){
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"firstStart"];
+        NSLog(@"第一次启动");
+        NSString *path = [[NSBundle mainBundle]pathForResource:@"LevelLocked" ofType:@"plist"];
+        NSDictionary *dic = [[NSDictionary alloc]initWithContentsOfFile:path];
+        if (!dic) {
+            NSLog(@"dic not found now!!!");
+        }
+        //NSLog(@"path:%@",path);
+        //获取应用程序沙盒的Documents目录
+        NSArray *paths=NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
+        NSString *plistPath = [paths objectAtIndex:0];
+        //得到完整的文件名
+        NSString *filename=[plistPath stringByAppendingPathComponent:@"LevelLocked.plist"];
+        //输入写入
+        //NSLog(@"filename:%@",filename);
+        [dic writeToFile:filename atomically:YES];
+        
+    }else{
+        NSLog(@"不是第一次启动");
+    }
+    
     // Present the scene.
     [skView presentScene:self.scene];
     

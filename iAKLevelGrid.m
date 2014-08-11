@@ -13,11 +13,9 @@
 #import "iAKGameConfig.h"
 
 #pragma mark - MenuLevel private Interface
+extern iAKGameModel *gameModel;
 
 @interface iAKLevelGrid() {
-    
-    iAKGameModel *gameModel;
-    
     int iconWidth, iconheight, gridPadding, gridCols, gridRows;
 }
 
@@ -99,13 +97,24 @@
             NSString *levelTitle = [tempLevel objectForKey:@"LevelTitle"];
             int levelID = [[tempLevel objectForKey:@"LevelID"] intValue];
             
+            NSArray *paths=NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
+            NSString *plistPath = [paths objectAtIndex:0];
+            
+            NSString *filename=[plistPath stringByAppendingPathComponent:@"LevelLocked.plist"];
+            
+            NSMutableDictionary *dic = [[NSMutableDictionary alloc]initWithContentsOfFile:filename];
+            
+            if (!dic) {
+                NSLog(@"dic not found");
+            }
+            
+            
+            BOOL levelLocked = [[dic objectForKey:[NSString stringWithFormat:@"%02d",levelID]]boolValue];
+            
             NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
             NSMutableDictionary *userLevelData = [[NSMutableDictionary alloc] initWithDictionary:[defaults dictionaryForKey:levelTitle]];
             
             NSInteger starsCollected = [[userLevelData objectForKey:@"highStarsCollected"] integerValue];
-            
-            
-            BOOL levelLocked = (levelID == 1 ? NO : ![[userLevelData objectForKey:@"unlocked"] boolValue]);
             
             [self createMenuItem:levelID position:CGPointMake(col * (iconWidth + (col == 0 ? 0 : gridPadding)) + (iconWidth / 2), (gridRows - row) * iconheight + ((gridRows - row - 1) * gridPadding) - (iconheight / 2)) life:starsCollected locked:levelLocked];
             

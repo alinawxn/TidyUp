@@ -81,6 +81,7 @@
 		8B62043C198ADD2200C06152 /* Tile_15@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B620405198ADD2200C06152 /* Tile_15@2x.png */; };
 		8B62043E198AE34500C06152 /* Background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B62043D198AE34500C06152 /* Background@2x.png */; };
 		8B620440198AE60100C06152 /* playButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B62043F198AE60100C06152 /* playButton.png */; };
+		8B8A588719980069007E6DAB /* LevelLocked.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B8A588619980069007E6DAB /* LevelLocked.plist */; };
 		8B90F3D01992B7B700220311 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 8B90F3CF1992B7B700220311 /* data.json */; };
 		8B90F3D31992DC7900220311 /* box.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B90F3D11992DC7900220311 /* box.png */; };
 		8B90F3D41992DC7900220311 /* box-frontboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B90F3D21992DC7900220311 /* box-frontboard.png */; };
@@ -215,6 +216,7 @@
 		8B620405198ADD2200C06152 /* Tile_15@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tile_15@2x.png"; sourceTree = "<group>"; };
 		8B62043D198AE34500C06152 /* Background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Background@2x.png"; sourceTree = "<group>"; };
 		8B62043F198AE60100C06152 /* playButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playButton.png; sourceTree = "<group>"; };
+		8B8A588619980069007E6DAB /* LevelLocked.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LevelLocked.plist; sourceTree = "<group>"; };
 		8B90F3CF1992B7B700220311 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		8B90F3D11992DC7900220311 /* box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = box.png; sourceTree = "<group>"; };
 		8B90F3D21992DC7900220311 /* box-frontboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "box-frontboard.png"; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 		8B620383198ADB5B00C06152 = {
 			isa = PBXGroup;
 			children = (
+				8B8A588619980069007E6DAB /* LevelLocked.plist */,
 				8BCC3354198EE9110011B0A2 /* Level */,
 				8BCC3328198EBD840011B0A2 /* Levels.plist */,
 				8BCC3329198EBD840011B0A2 /* Worlds.plist */,
@@ -680,6 +683,7 @@
 				8B6203A5198ADB5C00C06152 /* Main_iPhone.storyboard in Resources */,
 				8B90F3D31992DC7900220311 /* box.png in Resources */,
 				8B62043E198AE34500C06152 /* Background@2x.png in Resources */,
+				8B8A588719980069007E6DAB /* LevelLocked.plist in Resources */,
 				8B62039C198ADB5C00C06152 /* InfoPlist.strings in Resources */,
 				8B620430198ADD2200C06152 /* Tile_8@2x.png in Resources */,
 			);

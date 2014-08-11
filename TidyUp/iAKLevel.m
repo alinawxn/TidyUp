@@ -10,9 +10,9 @@
 #import "iAKLevel.h"
 #import "iAKGameModel.h"
 
+extern iAKGameModel *gameModel;
+
 @interface iAKLevel () {
-    
-    iAKGameModel *gameModel;
 }
 
 @end

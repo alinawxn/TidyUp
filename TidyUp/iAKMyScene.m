@@ -12,13 +12,15 @@
 GameState _gamestate;
 SKNode *_worldNode;
 NSInteger currentLevel,currentScore, levelTarget, levelMove, levelTime;
+BOOL levelLocked;
 NSSet *newObjects;
+iAKGameModel *gameModel;
 static const CGFloat TileWidth = 64.0;
 static const CGFloat TileHeight = 72.0;
 
 @interface iAKMyScene() {
     
-    iAKGameModel *gameModel;
+    
     iAKLevelScroller *levelsScroller;
     CGPoint initialPosition, initialTouch, initialParallaxBackPosition, initialParallaxMidPosition;
     int minimum_detect_distance;
@@ -47,7 +49,8 @@ static const CGFloat TileHeight = 72.0;
                 [self setUpMainMenuBackground];
                 [self setUpMainMenuPlayButton];
                 break;
-            case GameStateChooseLevel:
+            case GameStateChooseLevel:{
+                
                 gameModel = [iAKGameModel sharedManager];
                 content = [[NSMutableArray alloc] init];
                 
@@ -82,6 +85,8 @@ static const CGFloat TileHeight = 72.0;
                 [self addChild:pageLabel];
 
                 break;
+                
+            }
             case GameStateLevelPlay:{
                 self.anchorPoint = CGPointZero;
                 [self setUpMainMenuBackground];
@@ -793,8 +798,21 @@ static const CGFloat TileHeight = 72.0;
                 [self.GameStateWin_homebutton runAction:fadeIn];
                 [self.GameStateWin_nextlevelButton runAction:fadeIn];
                 [self.GameStateWin_levelChooseButton runAction:fadeIn];
+                currentScore = 0;
             }];
     }];
+    
+    NSArray *paths=NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
+    NSString *plistPath = [paths objectAtIndex:0];
+   
+    NSString *filename=[plistPath stringByAppendingPathComponent:@"LevelLocked.plist"];
+    
+    NSMutableDictionary *dic = [[NSMutableDictionary alloc]initWithContentsOfFile:filename];
+    
+    [dic setObject:@"NO" forKey:[NSString stringWithFormat:@"%02d",currentLevel + 1]];
+    [dic writeToFile:filename atomically:YES];
+
+    
 }
 
 -(void)switchToGameOverFailed{
@@ -814,6 +832,7 @@ static const CGFloat TileHeight = 72.0;
     _gamestate = GameStateChooseLevel;
     SKScene *newScene = [[iAKMyScene alloc]initWithSize:self.size state:_gamestate];
     SKTransition *transition = [SKTransition fadeWithColor:[UIColor blackColor] duration:0.3];
+    
     [self.view presentScene:newScene transition:transition];
 }
 
@@ -993,20 +1012,25 @@ static const CGFloat TileHeight = 72.0;
 
 - (void)levelSelected:(NSInteger)level {
     
-    NSDictionary *tempLevel = [gameModel.levels valueForKey:[NSString stringWithFormat:@"%02d", level]];
+    NSArray *paths=NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
+    NSString *plistPath = [paths objectAtIndex:0];
+    
+    NSString *filename=[plistPath stringByAppendingPathComponent:@"LevelLocked.plist"];
+    
+    NSMutableDictionary *dic = [[NSMutableDictionary alloc]initWithContentsOfFile:filename];
+    
+    if (!dic) {
+        NSLog(@"dic not found");
+    }
     
     
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSMutableDictionary *userLevelData = [[NSMutableDictionary alloc] initWithDictionary:[defaults dictionaryForKey:[tempLevel objectForKey:@"LevelTitle"]]];
+    BOOL levelLocked = [[dic objectForKey:[NSString stringWithFormat:@"%02d",level]]boolValue];
     
-    BOOL levelLocked = (level == 1 ? NO : ![[userLevelData objectForKey:@"unlocked"] boolValue]);
-    
-    //    self.levelNumber = [[tempLevel objectForKey:@"levelNumber"] intValue];
-    //    self.levelType = [[tempLevel objectForKey:@"levelType"] intValue];
-    //    self.levelRows = [[tempLevel objectForKey:@"levelRows"] intValue];
-    //    self.levelCols = [[tempLevel objectForKey:@"levelCols"] intValue];
-    
-    [self switchToLevelPlay:level];
+    if (levelLocked == NO) {
+        [self switchToLevelPlay:level];
+    }else if (levelLocked == YES){
+        NSLog(@"LOCKED");
+    }
 }
 
 #pragma mark - play methods
@@ -1021,11 +1045,35 @@ static const CGFloat TileHeight = 72.0;
 }
 
 -(void)addTiles{
-    for (NSInteger row = 0; row < NumRows; row ++) {
-        for (NSInteger column = 0; column < NumColumns; column++) {
-            if ([self.levelObject tileAtColumn:column row:row]!= nil) {
-                SKSpriteNode *tileNode = [SKSpriteNode spriteNodeWithImageNamed:@"Tile@2x.png"];
-                tileNode.position = [self pointForColumn:column row:row];
+    
+    
+    for (NSInteger row = 0; row <= NumRows; row++) {
+        for (NSInteger column = 0; column <= NumColumns; column++) {
+            
+            BOOL topLeft     = (column > 0) && (row < NumRows)
+            && [self.levelObject tileAtColumn:column - 1 row:row];
+            
+            BOOL bottomLeft  = (column > 0) && (row > 0)
+            && [self.levelObject tileAtColumn:column - 1 row:row - 1];
+            
+            BOOL topRight    = (column < NumColumns) && (row < NumRows)
+            && [self.levelObject tileAtColumn:column row:row];
+            
+            BOOL bottomRight = (column < NumColumns) && (row > 0)
+            && [self.levelObject tileAtColumn:column row:row - 1];
+            
+            // The tiles are named from 0 to 15, according to the bitmask that is
+            // made by combining these four values.
+            NSUInteger value = topLeft | topRight << 1 | bottomLeft << 2 | bottomRight << 3;
+            
+            // Values 0 (no tiles), 6 and 9 (two opposite tiles) are not drawn.
+            if (value != 0 && value != 6 && value != 9) {
+                NSString *name = [NSString stringWithFormat:@"Tile_%lu@2x", (long)value];
+                SKSpriteNode *tileNode = [SKSpriteNode spriteNodeWithImageNamed:name];
+                CGPoint point = [self pointForColumn:column row:row];
+                point.x -= TileWidth/2;
+                point.y -= TileHeight/2;
+                tileNode.position = point;
                 tileNode.zPosition = LayerGame;
                 [_worldNode addChild:tileNode];
             }

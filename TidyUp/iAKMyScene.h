@@ -43,9 +43,11 @@ extern NSInteger currentScore;
 extern NSInteger levelTarget;
 extern NSInteger levelMove;
 extern NSInteger levelTime;
+extern BOOL levelLocked;
 extern GameState _gamestate;
 extern SKNode *_worldNode;
 extern NSInteger currentLevel;
+extern iAKGameModel *gameModel;
 
 
 @interface iAKMyScene : SKScene

@@ -8,7 +8,7 @@
 
 #import "iAKLevelObject.h"
 
-extern NSInteger currentScore,levelTarget, levelTime, levelMove;
+extern NSInteger currentScore,levelTarget, levelTime, levelMove, levelLocked;
 
 @interface iAKLevelObject ()
 

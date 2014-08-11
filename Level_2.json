@@ -9,8 +9,7 @@
               [1, 0, 0, 1, 1, 1, 0, 0, 1 ],
               [1, 1, 0, 0, 1, 0, 0, 1, 1 ] ],
 
-    "targetScore" : 1000,
-    "moves" : 15,
+    "targetScore" : 0,
+    "moves" : 1,
     "time" : 1000,
-    "locked" : 1,
 }
